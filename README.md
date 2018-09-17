@@ -18,7 +18,6 @@
 |name|integer|null: false, unique: true|
 |email|string|null: false, unique: true|
 |encrypted_Password|string|null: false, unique: true|
-|created_at|datetime|
 ### Association
 - has_many :group, through: :members
 - has_many :message
@@ -28,7 +27,6 @@
 |Column|Type|Options|
 |------|----|-------|
 |group_name|integer|null: :false|
-|created_at|datetime|
 
 ### Association
 - has_many :message
@@ -42,7 +40,6 @@
 |user_id|integer|null: false|
 |body|text|
 |image|string|
-|created_at|datetime|
 
 ### Association
 - belongs_to :group
