@@ -47,7 +47,7 @@
 |created_at|datetime|
 
 ### Association
-- belongs_to :members
+- belongs_to :group
 - belongs_to :user
 
 
