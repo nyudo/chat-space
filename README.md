@@ -1,28 +1,5 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
 ## membersテーブル
 
 |Column|Type|Options|
@@ -43,7 +20,7 @@ Things you may want to cover:
 |email|string|null: false, unique: true|
 |encrypted_Password|string|null: false, unique: true|
 |created_at|datetime|
-###Association
+### Association
 - has_many :group, through: :members
 - has_many :message
 
@@ -69,8 +46,8 @@ Things you may want to cover:
 |image|string|
 |created_at|datetime|
 
-###Association
+### Association
 - belongs_to :members
-- belongs_t0 :user
+- belongs_to :user
 
 
