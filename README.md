@@ -4,39 +4,39 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true,add_index|
+|user_id|integer|null: false, foreign_key: true, add_index|
 |group_id|integer|null: false, foreign_key: true, add_index|
 
 ### Association
 - belongs_to :group
 - belongs_to :user
 
-## userテーブル
+## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|integer|null: false, unique: true|
+|name|string|null: false, unique: true|
 |email|string|null: false, unique: true|
 |encrypted_Password|string|null: false, unique: true|
 ### Association
 - has_many :messages
 - has_many :members
-- has_many :group, through: :members
+- has_many :groups, through: :members
 
-## groupテーブル
+## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|integer|null: :false|
+|name|string|null: :false|
 
 ### Association
 - has_many :messages
 - has_many :members
-- has_many :user, through: :members
+- has_many :users, through: :members
 
-## messageテーブル
+## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|group_id|integer|null: false, add_index|
-|user_id|integer|null: false, add_index|
+|group_id|integer|null: false, add_index, foreign_key: true|
+|user_id|integer|null: false, add_index, foreign_key: true|
 |body|text|
 |image|string|
 
