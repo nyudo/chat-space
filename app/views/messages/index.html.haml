@@ -4,30 +4,23 @@
     .header
       .left-header
         .left-header__title
-          グループ名ABC
+          = @group.name
         %ul.left-header__members
-          Member：ABC
+          Member：
           %li.member
-            名前ABC
+            - @group.users.each do |namae|
+              = namae.name
       .right-header
         .right-header__button
         = link_to "Edit", edit_group_path(@group)
 
-    .messages
-      .message
-        .message-data
-          .message-data__user-name
-            名前
-          .message-data__date
-            2018/00/00
-        .main-meesage
-          .main-message__content
-            メッセージ
+    = render partial: 'message', collection: @messages
+
     .form
-      %form
-        %input.form__message{placeholder: 'type a message'}
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
         .form__mask
-          %label.form__mask__image
-            = fa_icon 'picture-o', class: 'push'
-            %input.hidden{type: 'file'}
-        %input.form__submit{type: 'submit', value: 'send'}
+          = f.label :image, class: 'form__mask__image' do
+            = fa_icon 'picture-o', class: 'icon'
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'form__submit'
