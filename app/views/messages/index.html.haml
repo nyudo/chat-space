@@ -1,7 +1,4 @@
-
 .wrapper
-  .title-message
-    チャットグループが作成されました。
   = render "left-bar"
   .chat-space
     .header
@@ -14,7 +11,8 @@
             名前ABC
       .right-header
         .right-header__button
-          Edit
+        = link_to "Edit", edit_group_path(@group)
+
     .messages
       .message
         .message-data
