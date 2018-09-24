@@ -35,7 +35,7 @@
         }
       }
     }
-
+  }
     .groups {
       background-color:  #2f3e51;
       height: calc(100vh - 100px);
@@ -52,8 +52,6 @@
         }
       }
     }
-  }
-  }
   .chat-space {
     float: right;
     width: calc(100% - 300px);
@@ -161,4 +159,5 @@
         padding: 0 30px;
       }
     }
+  }
 }
