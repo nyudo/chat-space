@@ -1,14 +1,13 @@
-.messages
-  .message
-    .message-data
-      .message-data__user-name
-        = message.user.name
-      .message-data__date
-        = message.created_at
-    .main-meesage
-      - if message.content.present?
-        %p.main-message__content
-          = message.content
-      = image_tag message.image.url, class: 'main-message__image' if message.image.present?
+.message
+  .message-data
+    .message-data__user-name
+      = message.user.name
+    .message-data__date
+      = message.created_at
+  .main-meesage
+    - if message.content.present?
+      %p.main-message__content
+        = message.content
+    = image_tag message.image.url, class: 'main-message__image' if message.image.present?
 
 
