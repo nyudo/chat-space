@@ -3,7 +3,9 @@
     box-sizing: border-box;
     color: $white;
     width: 300px;
-    .header {
+    height: 100%;
+    background-color:  #2f3e51;
+  .header {
       background-color:  #253141;
       height: 100px;
       line-height: 100px;
@@ -25,4 +27,20 @@
         }
       }
     }
+  .groups {
+      background-color:  #2f3e51;
+      height: calc(100% - 100px);
+      padding: 0 20px;
+      .group {
+        box-sizing: border-box;
+        padding: 20px 0 40px;
+        &__name {
+          font-size: 15px;
+        }
+        &__message {
+          font-size: 11px;
+          margin-top: 5px;
+        }
+      }
   }
+}

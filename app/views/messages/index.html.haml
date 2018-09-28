@@ -13,8 +13,8 @@
       .right-header
         .right-header__button
         = link_to "Edit", edit_group_path(@group)
-
-    = render partial: 'message', collection: @messages
+    .messages
+      = render partial: 'message', collection: @messages
 
     .form
       = form_for [@group, @message] do |f|
