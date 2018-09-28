@@ -1,8 +1,8 @@
 $(function(){
   function buildHTML(message){
-    var gazou = '';
+    var message_image = '';
     if (message.image.url){
-      gazou = `<img src="${message.image.url}">`;
+      message_image = `<img src="${message.image.url}">`;
     }
 
     var html = `  <div class = "message">
@@ -12,7 +12,7 @@ $(function(){
                     </div>
                     <div class ="main-meesage">
                       <p class ="main-message__content">${message.content}</p>
-                      <div>${gazou}</div>
+                      <div>${message_image}</div>
                     </div>
                   </div>
                `
@@ -33,7 +33,7 @@ $(function(){
     .done(function(data){
       var html = buildHTML(data);
       $('.messages').append(html)
-      $('.form__message').val('')
+      $("form")[0].reset();
       $('html').animate({
         scrollTop: $(document).height()
       },500)
