@@ -1,4 +1,4 @@
-$(function(){
+$(function () {
   function appendUser(user) {
     var html = `<div class="chat-group-user clearfix">
                 <p class="chat-group-user__name">${user.name}</p>
@@ -7,12 +7,12 @@ $(function(){
     $("#user-search-result").append(html);
   }
 
-  function appendNoUser(user){
+  function appendNoUser (user) {
     var html = `<div class = "chat-group-user clearfix">${user}<div>`
     $("#user-search-result").append(html);
   }
 
-  function appendChatMember(id,name) {
+  function appendChatMember (id,name) {
     var html = `<div class='chat-group-user clearfix js-chat-member' id='chat-group-user-8'>
                   <input name='group[user_ids][]' type='hidden' value=${id}>
                   <p class='chat-group-user__name'>${name}</p>
@@ -21,7 +21,7 @@ $(function(){
     $('#chat-group-users').append(html);
   }
 
-  $('#user-search-field').on('keyup',function(){
+  $('#user-search-field').on('keyup',function () {
     var input = $('#user-search-field').val();
    $.ajax({
       type: 'GET',
@@ -29,10 +29,10 @@ $(function(){
       data: { keyword: input },
       dataType: 'json'
     })
-    .done(function(users){
+    .done(function (users) {
       $("#user-search-result").empty();
       if (users.length !== 0) {
-        users.forEach(function(user){
+        users.forEach(function (user) {
           appendUser(user);
         })
       }
@@ -40,7 +40,7 @@ $(function(){
         appendNoUser('該当者なし');
       }
     })
-    .fail(function(){
+    .fail(function () {
       alert('ユーザー検索に失敗しました.');
     })
   });
