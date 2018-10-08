@@ -44,6 +44,11 @@ group :development, :test do
   gem 'factory_girl_rails', '~> 4.0'
   gem 'faker'
   gem 'capybara'
+  gem 'capistrano'
+  gem 'capistrano-rbenv'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
+  gem 'capistrano3-unicorn'
 end
 
 group :development do
@@ -62,9 +67,12 @@ gem 'erb2haml'
 gem 'font-awesome-rails'
 gem 'devise'
 gem 'carrierwave'
+gem 'fog-aws'
 gem 'mini_magick'
 gem 'jquery-turbolinks'
+
 
 group :production do
   gem 'unicorn'
 end
+
