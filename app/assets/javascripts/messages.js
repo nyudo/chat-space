@@ -2,7 +2,7 @@ $(function(){
   function buildHTML (message) {
     var message_image = '';
     if (message.image.url){
-      message_image = `<img src="${message.image.url}">`;
+      message_image = `<img src="${message.image}">`;
     }
     var html = `  <div class = "message" data-message_id="${message.id}">
                     <div class = "message-data">
@@ -67,8 +67,9 @@ $(function(){
       addmessages.forEach(function(message) {
         if (message.id > last_id ) {
           insertHTML(message)
+          scrollend();
         }
-      scrollend();
+
       });
     })
     .fail(function(data) {

@@ -1,3 +1,4 @@
+
 $(function () {
   function appendUser(user) {
     var html = `<div class="chat-group-user clearfix">
@@ -55,4 +56,3 @@ $(function () {
     $(this).parent().remove();
   });
 });
-
