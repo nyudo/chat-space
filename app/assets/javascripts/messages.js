@@ -35,7 +35,7 @@ $(function(){
       $('.messages').append(html)
       $("form")[0].reset();
       $('html').animate({
-        scrollTop: $(document).height()
+        scrollTop: $('.messages').height()
       },500)
     })
     .fail(function(){
@@ -46,7 +46,7 @@ $(function(){
 
     function scrollend() {
         $('html').animate({
-        scrollTop: $(document).height()
+        scrollTop: $('.messages').height()
       },500)
     }
     function insertHTML(message) {
