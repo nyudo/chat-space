@@ -71,7 +71,6 @@ gem 'fog-aws'
 gem 'mini_magick'
 gem 'jquery-turbolinks'
 
-gem 'nokogiri', '~> 1.8.5'
 group :production do
   gem 'unicorn'
 end
