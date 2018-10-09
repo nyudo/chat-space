@@ -65,7 +65,7 @@ $(function(){
     })
     .done(function(addmessages) {
       addmessages.forEach(function(message) {
-        if (last.id > last_id ) {
+        if (message.id > last_id ) {
           insertHTML(message)
         }
         scrollend();
