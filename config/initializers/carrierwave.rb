@@ -12,6 +12,6 @@ CarrierWave.configure do |config|
     region: 'northeast-1'
   }
 
-  config.fog_directory  = 'nyudogumotest'
-  config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/nyudogumotest'
+  config.fog_directory  = 'newnyudo-test'
+  config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/newnyudo-test'
 end
