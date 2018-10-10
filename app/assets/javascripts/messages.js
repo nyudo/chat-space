@@ -57,8 +57,7 @@ $(function(){
     var interval = setInterval(function() {
       var last_id = $('.message:last').data('message_id')
       if (window.location.href.match(/\/groups\/\d+\/messages/)) {
-
-    $.ajax({
+     $.ajax({
       url: location.href.json,
       data: {last_id: last_id },
       dataType: 'json'
