@@ -21,7 +21,7 @@ $(function () {
     $("#chat-group-users").append(html);
   }
 
-  $("#user-search-field").on('keyup',function () {
+  $(".chat-group-form__input").on('keyup',function () {
     var input = $('#user-search-field').val();
    $.ajax({
       type: 'GET',
